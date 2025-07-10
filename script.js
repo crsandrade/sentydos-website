@@ -1,5 +1,5 @@
 const texto = "PSICOTERAPIA E DESENVOLVIMENTO PESSOAL"; // tem 33 caracteres
-const container = document.querySelector('#container-titles')
+const container = document.querySelector('.container-titles')
 
 // Função para gerar letras com transform aleatório
 function gerarLetras() {
