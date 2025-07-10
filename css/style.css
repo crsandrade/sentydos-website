@@ -1,0 +1,269 @@
+/* ------------------- RESET CSS ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------------- VARIÁVEIS ------------------- */
+:root {
+  --cor-fonte-geral: #0c0a0aa8;
+  --fundo-navegadores: rgba(138, 199, 199, 0.259);
+}
+
+/* ------------------- ELEMENTOS BÁSICOS ------------------- */
+h1 {
+  color: var(--cor-fonte-geral);
+  font-size: 4rem;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+footer {
+  padding: 20px 10px;
+  text-align: center;
+  color: var(--cor-fonte-geral);
+}
+
+/* ------------------- CONTAINER PRINCIPAL ------------------- */
+#container-master {
+  flex: 1;
+  background-color: rgb(249, 250, 250);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------- NAVEGAÇÃO ------------------- */
+.navegadores {
+  background-color: var(--fundo-navegadores);
+  width: 100%;
+}
+
+.navegadores ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 8px;
+}
+
+.navegadores li {
+  color: var(--cor-fonte-geral);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* ------------------- TÍTULO ANIMADO ------------------- */
+#container-titles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  cursor: pointer;
+  font-size: 24px;
+  font-family: monospace;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+#container-titles span {
+  display: inline-block;
+  opacity: 0;
+  color: var(--cor-fonte-geral);
+  transition: transform 2.5s ease, opacity 0.5s ease;
+}
+
+/* ------------------- PÁGINA: SOBRE NÓS ------------------- */
+#container-columns {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../imgs/terapia-deitado.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container-columns .column-left img {
+  width: 100%;
+}
+
+#container-columns .column-right h1 {
+  text-align: start;
+  font-size: 3rem;
+}
+
+#container-columns .column-right legend {
+  text-align: start;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  color: rgb(27, 134, 184);
+}
+
+#container-columns .column-right p {
+  color: var(--cor-fonte-geral);
+  font-size: 1rem;
+}
+
+/* ------------------- PÁGINA: ENDEREÇO ------------------- */
+.address-column-r {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.address-column-r h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.address-column-r h3 {
+  text-align: center;
+  color: rgb(27, 134, 184);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.address-column-r caption {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.address-column-r table, 
+.address-column-r td, 
+.address-column-r th {
+  border: 0.1rem solid black;
+  font-size: 1rem;
+}
+
+/* ------------------- MEDIA QUERY: até 768px ------------------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-list ol li {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #container-titles {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  #container-columns {
+    padding: 20px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../imgs/terapia-deitado.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #container-columns .column-left img {
+    width: 90%;
+  }
+
+  #container-columns .column-right h1 {
+    text-align: start;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  #container-columns .column-right p {
+    color: var(--cor-fonte-geral);
+    font-size: 1rem;
+  }
+}
+
+/* ------------------- MEDIA QUERY: até 480px ------------------- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .navegadores a {
+    font-size: 0.65rem;
+  }
+
+  .navegadores li {
+    color: var(--cor-fonte-geral);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 2px;
+    font-size: 0.9rem;
+  }
+
+  #container-master img {
+    width: 1.5rem;
+  }
+
+  #container-titles {
+    font-size: 0.75rem;
+    margin-left: 5px;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+
+  #container-columns {
+    padding: 20px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../imgs/terapia-deitado.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #container-columns .column-left img {
+    width: 90%;
+  }
+
+  #container-columns .column-right h1 {
+    text-align: start;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #container-columns .column-right p {
+    color: var(--cor-fonte-geral);
+    font-size: 0.7rem;
+  }
+}
