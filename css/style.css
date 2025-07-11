@@ -12,6 +12,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1rem;
 }
 
 ol, ul {
@@ -36,7 +37,7 @@ a {
   flex-direction: column;
   align-items: center;
   flex: 1;
-  width: 100%;
+  width: 75%;
 }
 
 .navegador {
@@ -97,7 +98,7 @@ a {
 }
 
 .about-body img {
-  width: 30%;
+  max-width: 20%;
   border-radius: 0.5rem;
 }
 
@@ -122,32 +123,32 @@ a {
   background-color: rgba(92, 238, 92, 0.836);
 }
 
-.avaliation-type1 {
+.faq {
   display: flex;
   flex-direction: row-reverse;
-  gap: 15rem;
-  padding: 1rem;
-  margin: 1.5rem auto;
+  gap: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
   border: 0.1rem solid var(--opacity-border-boxes);
   width: 100%;
 }
 
-.avaliation-type1 h2 {
+.faq h2 {
   padding: 0.5rem;
   margin-bottom: 2rem;
 }
 
-.avaliation-type1-body {
+.faq-body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 1.5rem;
 }
 
-.avaliation-type1 img {
-  max-width: 30%;
-  height: auto;
+.faq img {
   border-radius: 0.5rem;
+  max-width: 25rem;
+  margin-bottom: 1rem;
 }
 
 .container-titles {
@@ -171,6 +172,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .locale table {
