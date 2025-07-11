@@ -106,17 +106,42 @@ a {
   margin-left: 1.5rem;
 }
 
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts h2 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--cor-fonte-geral);
+}
+
+.whatsApp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
 .whatsApp-button {
   background-color: green;
   color: white;
+  font-size: 1.2rem;
   border-radius: 0.3rem;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   box-shadow: 2px 2px 8px var(--opacity-shadow-boxes);
+  cursor: pointer;
+  margin: 2rem auto;
+  gap: 0.5rem;
+  transition: 0.5s;
 }
 
 .whatsApp-button:hover {
@@ -136,7 +161,7 @@ a {
 
 .faq h2 {
   padding: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.3rem;
 }
 
 .faq-body {
