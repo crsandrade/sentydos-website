@@ -6,7 +6,7 @@
 }
 
 html, body {
-
+  scroll-behavior: smooth;
   font-family: 'Roboto';
   min-height: 100vh;
   display: flex;
@@ -57,6 +57,11 @@ a {
 .nav-list a {
   color: var(--cor-fonte-geral);
   font-weight: bold;
+  transition: 0.5s;
+}
+
+.nav-list a:hover {
+  color: rgb(60, 172, 236, 0.8);
 }
 
 .title {
@@ -70,24 +75,24 @@ a {
   justify-content: center;
 }
 
-.about h2 {
+#about {
+  background-color: var(--fundo-navegadores);
+  padding: 1rem;
+  margin: 1.5rem auto;
+  box-shadow: 2px 2px 8px var(--opacity-shadow-boxes);
+}
+
+#about h2 {
  align-self: start;
  padding: 0.5rem;
  margin-left: 1rem;
 }
 
-.about legend {
+#about legend {
  align-self: start;
  margin-left: 1.5rem;
  color: rgb(8, 137, 223);
  font-weight: bold;
-}
-
-.about {
-  background-color: var(--fundo-navegadores);
-  padding: 1rem;
-  margin: 1.5rem auto;
-  box-shadow: 2px 2px 8px var(--opacity-shadow-boxes);
 }
 
 .about-body {
@@ -106,49 +111,7 @@ a {
   margin-left: 1.5rem;
 }
 
-.contacts {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contacts h2 {
-  margin-top: 2rem;
-  font-size: 2rem;
-  color: var(--cor-fonte-geral);
-}
-
-.whatsApp {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.whatsApp-button {
-  background-color: green;
-  color: white;
-  font-size: 1.2rem;
-  border-radius: 0.3rem;
-  padding: 1rem;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 2px 2px 8px var(--opacity-shadow-boxes);
-  cursor: pointer;
-  margin: 2rem auto;
-  gap: 0.5rem;
-  transition: 0.5s;
-}
-
-.whatsApp-button:hover {
-  background-color: rgba(92, 238, 92, 0.836);
-}
-
-.faq {
+#faq {
   display: flex;
   flex-direction: row-reverse;
   gap: 4rem;
@@ -159,7 +122,7 @@ a {
   width: 100%;
 }
 
-.faq h2 {
+#faq h2 {
   padding: 0.5rem;
   margin-bottom: 1.3rem;
 }
@@ -170,7 +133,7 @@ a {
   align-items: flex-end;
 }
 
-.faq img {
+#faq img {
   border-radius: 0.5rem;
   max-width: 25rem;
   margin-bottom: 1rem;
@@ -190,7 +153,7 @@ a {
   transition: transform 2.5s ease, opacity 0.5s ease;
 }
 
-.locale h2 {
+#locale h2 {
   font-size: 1.5rem;
   color: var(--cor-fonte-geral);
   display: flex;
@@ -200,7 +163,7 @@ a {
   margin-top: 1rem;
 }
 
-.locale table {
+#locale table {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,8 +171,51 @@ a {
   margin-bottom: 1rem;
 }
 
-.locale, iframe, legend {
+#locale, iframe, legend {
   width: 100%;
+}
+
+#contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contacts h2 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--cor-fonte-geral);
+}
+
+.whatsApp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.whatsApp-button {
+  background-color: green;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px var(--opacity-shadow-boxes);
+  cursor: pointer;
+  margin: 2rem auto;
+  gap: 0.5rem;
+  transition: 0.5s;
+}
+
+.whatsApp-button:hover {
+  background-color: rgba(92, 238, 92, 0.836);
 }
 
 footer {
