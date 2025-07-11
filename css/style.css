@@ -119,7 +119,24 @@ a {
   transition: transform 2.5s ease, opacity 0.5s ease;
 }
 
-iframe {
+.locale h2 {
+  font-size: 1.5rem;
+  color: var(--cor-fonte-geral);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.locale table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.locale, iframe, legend {
   width: 100%;
 }
 
