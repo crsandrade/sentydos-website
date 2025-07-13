@@ -84,6 +84,10 @@ a {
   transition: transform 2.5s ease, opacity 0.5s ease;
 }
 
+#banner-home {
+  max-width: 100%;
+}
+
 .container-main {
   display: flex;
   flex-direction: column;
