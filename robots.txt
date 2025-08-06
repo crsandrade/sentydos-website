@@ -1,0 +1,12 @@
+# Arquivo robots.txt para Sentydos
+User-agent: *
+Disallow: /assets/js/
+Disallow: /assets/css/
+Allow: /public/assets/images/
+Allow: /
+
+# Evitar sobrecarga de solicitações
+Crawl-delay: 10
+
+# Localização do sitemap (quando disponível)
+# Sitemap: https://www.sentydos.com.br/sitemap.xml

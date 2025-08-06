@@ -1,0 +1,8 @@
+# security.txt para Sentydos
+# Mais informações: https://securitytxt.org/
+
+Contact: mailto:contato@sentydos.com.br
+Expires: 2025-12-31T23:59:59-03:00
+Preferred-Languages: pt-BR, en
+Canonical: https://www.sentydos.com.br/.well-known/security.txt
+Policy: https://www.sentydos.com.br/security-policy.html

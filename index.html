@@ -4,14 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="imgs/fav.png" type="image/x-icon">
+    <meta name="theme-color" content="#0077b6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Consultório de Psicologia Sentydos - A sua mente no melhor estado">
+    <!-- Cabeçalhos de segurança -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta name="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; connect-src 'self'; frame-src 'self' https://www.google.com; object-src 'none'; report-uri /csp-report.php; report-to default">
+    <!-- Recursos do site -->
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/responsive.css">
+    <link rel="shortcut icon" href="public/assets/icons/fav.png" type="image/x-icon">
+    <link rel="manifest" href="config/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=
-    Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <title>Sentydos - A sua mente no melhor estado</title>
@@ -19,12 +30,15 @@
 
 <body>
      <nav class="navegador">
+            <div class="menu-icon">
+                <span class="hamburger"></span>
+            </div>
             <ol class="nav-list">
                 <li><a href="#about">Sobre Nós</a></li>
                 <li><a href="#contacts">Contato</a></li>
                 <li><a href="#locale">Endereço</a></li>
                 <li><a href="#faq">Dúvidas Frequentes</a></li>
-                <li><a href="#">Serviços</a></li>
+                <li><a href="#services">Serviços</a></li>
                 <li><a href="#contacts">Agendar</a></li>
             </ol>
         </nav>
@@ -33,15 +47,72 @@
 
         <h1 class="title">
             SENTYDOS
-            <img src="assets/imgs/fav.png" alt="">
+            <img src="public/assets/images/fav.png" alt="">
         </h1>
 
         <div class="container-titles">
         </div>
 
-        <img src="assets/imgs/banner-gif.gif" alt="" id="banner-home">
+        <img src="public/assets/images/banner-gif.gif" alt="" id="banner-home">
 
         <div class="container-main">
+            <section id="benefits">
+                <h2>🌟 Por que buscar ajuda psicológica?</h2>
+                <div class="benefits-container">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🧠</div>
+                        <h3>Autoconhecimento</h3>
+                        <p>Desenvolva uma compreensão mais profunda sobre seus pensamentos, emoções e comportamentos.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💪</div>
+                        <h3>Fortalecimento Emocional</h3>
+                        <p>Aprenda estratégias eficazes para lidar com ansiedade, estresse e desafios do dia a dia.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🤝</div>
+                        <h3>Relacionamentos Saudáveis</h3>
+                        <p>Melhore sua comunicação e construa vínculos mais significativos com as pessoas ao seu redor.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Clareza de Objetivos</h3>
+                        <p>Identifique seus valores e metas, criando um caminho mais claro para sua realização pessoal.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cta-primary">
+                <div class="cta-container">
+                    <h2>🤝 Pronto para dar o primeiro passo?</h2>
+                    <p>Agende sua consulta hoje mesmo e comece sua jornada de autoconhecimento e bem-estar.</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/5585999887766" class="cta-button primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Agendar pelo WhatsApp
+                        </a>
+                        <a href="tel:+5585999887766" class="cta-button secondary">
+                            <i class="fas fa-phone"></i>
+                            Ligar Agora
+                        </a>
+                    </div>
+                    <div class="trust-indicators">
+                         <div class="trust-item">
+                             <span class="check-emoji">✅</span>
+                             <span>Sigilo Profissional Garantido</span>
+                         </div>
+                         <div class="trust-item">
+                             <span class="check-emoji">✅</span>
+                             <span>Horários Flexíveis</span>
+                         </div>
+                         <div class="trust-item">
+                             <span class="check-emoji">✅</span>
+                             <span>Profissional Registrado CRP</span>
+                         </div>
+                     </div>
+                </div>
+            </section>
+
             <section id="about">
                 <h2>🖈Quem somos?</h2>
                 <legend>PSICÓLOGO: VALMIRO FILHO (CRP:039433)</legend>
@@ -57,38 +128,113 @@
                         Presentes desde 2017, prezamos sempre pela qualidade do atendimento, estando prontos para
                         acolher e satisfazer necessidades em todos os âmbitos.
                     </p>
-                    <img src="assets/imgs/valmiro-filho.png" alt="">
+                    <img src="public/assets/images/valmiro-filho.png" alt="">
                 </div>
             </section>
 
-             <a href="" class="whatsApp-button">Fale comigo via WhatsApp!<p style="font-size:24px" class="fa">&#xf232;</p></a>
-
             <section id="faq">
-                <div class="faq-body">
-                    <h2>🖈O que é um <u>atendimento psicológico</u>?</h2>
-                    <p>O atendimento psicológico tem a finalidade de ajudar e trabalhar em todas as questões 
-                        emocionais, comportamentais, relacionamento, carreira, profissão, família, casamento,
-                        timidez, ansiedades
-                        depressão, questões psiquiátricas ou existenciais.
-                    </p>
-                    <h2>🖈O que é uma <u>avaliação psicológica</u>?</h2>
-                    <p>O atendimento psicológico tem a finalidade de ajudar e trabalhar em todas as questões 
-                        emocionais, comportamentais, relacionamento, carreira, profissão, família, casamento,
-                        timidez, ansiedades
-                        depressão, questões psiquiátricas ou existenciais.
-                    </p>
-                    <h2>🖈O que é uma <u>avaliação neuropsicológica</u>?</h2>
-                    <p>A avaliação neuropsicológica busca investigar quais as funções cognitivas que estão preservadas e
-                        as que estão comprometidas. Através do uso de instrumentos (testes, baterias, escalas)
-                        padronizados para avaliação das funções cognitivas, o neuropsicólogo irá pesquisar o desempenho
-                        de habilidades como atenção, percepção, linguagem, raciocínio, abstração, memória, aprendizagem,
-                        processamento da informação, visuoconstrução, afeto, habilidades motoras e executivas.
-                    </p>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-content">
+                            <h2>🖈O que é um <u>atendimento psicológico</u>?</h2>
+                            <p>O atendimento psicológico tem a finalidade de ajudar e trabalhar em todas as questões 
+                                emocionais, comportamentais, relacionamento, carreira, profissão, família, casamento,
+                                timidez, ansiedades, depressão, questões psiquiátricas ou existenciais.
+                            </p>
+                        </div>
+                        <div class="faq-image">
+                            <img src="public/assets/images/atendimento-psicologico.jpg" alt="Atendimento psicológico">
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-content">
+                            <h2>🖈O que é uma <u>avaliação psicológica</u>?</h2>
+                            <p>A avaliação psicológica é um processo técnico-científico que utiliza métodos, técnicas e instrumentos 
+                                psicológicos para coletar dados sobre o funcionamento psicológico de uma pessoa. Ela busca compreender 
+                                aspectos cognitivos, emocionais, comportamentais e de personalidade para auxiliar em diagnósticos, 
+                                orientações e tomadas de decisão.
+                            </p>
+                        </div>
+                        <div class="faq-image">
+                            <img src="public/assets/images/terapia-deitado.jpg" alt="Avaliação psicológica">
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-content">
+                            <h2>🖈O que é uma <u>avaliação neuropsicológica</u>?</h2>
+                            <p>A avaliação neuropsicológica busca investigar quais as funções cognitivas que estão preservadas e
+                                as que estão comprometidas. Através do uso de instrumentos (testes, baterias, escalas)
+                                padronizados para avaliação das funções cognitivas, o neuropsicólogo irá pesquisar o desempenho
+                                de habilidades como atenção, percepção, linguagem, raciocínio, abstração, memória, aprendizagem,
+                                processamento da informação, visuoconstrução, afeto, habilidades motoras e executivas.
+                            </p>
+                        </div>
+                        <div class="faq-image">
+                            <img src="public/assets/images/terapia-sentado.jpg" alt="Avaliação neuropsicológica">
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-imgs">
-                    <img src="assets/imgs/atendimento-psicologico.jpg" alt="">
-                    <img src="assets/imgs/terapia-deitado.jpg" alt="">
-                    <img src="assets/imgs/terapia-sentado.jpg" alt="">
+            </section>
+
+            <section id="process">
+                <h2>🛤️ Como funciona o processo terapêutico?</h2>
+                <div class="process-container">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Primeiro Contato</h3>
+                            <p>Entre em contato conosco pelo WhatsApp ou telefone. Vamos esclarecer suas dúvidas e agendar uma consulta inicial.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Consulta Inicial</h3>
+                            <p>Na primeira sessão, conheceremos sua história e objetivos. É um momento de acolhimento e definição do plano terapêutico.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Desenvolvimento</h3>
+                            <p>Através de sessões regulares, trabalharemos juntos no seu processo de autoconhecimento e desenvolvimento pessoal.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Resultados</h3>
+                            <p>Gradualmente, você desenvolverá novas habilidades e perspectivas para lidar com os desafios da vida.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services">
+                <h2>🧠 Nossos Serviços</h2>
+                <div class="services-container">
+                    <div class="services-column">
+                        <div class="service-card">
+                            <h3>Psicoterapia</h3>
+                            <p>Atendimento psicológico individual para adultos, adolescentes e crianças, com foco no desenvolvimento pessoal e bem-estar emocional.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Avaliação Psicológica</h3>
+                            <p>Processo técnico-científico que utiliza métodos e instrumentos para avaliar características psicológicas específicas.</p>
+                        </div>
+                    </div>
+                    <div class="services-column">
+                        <div class="service-card">
+                            <h3>Avaliação Neuropsicológica</h3>
+                            <p>Investigação das funções cognitivas através de testes padronizados para identificar áreas preservadas e comprometidas.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Recrutamento e Seleção</h3>
+                            <p>Serviços para empresas na identificação e seleção de talentos alinhados com a cultura organizacional.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -105,25 +251,30 @@
                     </tr>
                 </table>
                 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.
-                            762759692223!2d-38.457413!3d-12.979438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b0ff331e23f%3A0x6b
-                            8eeae0e8cce743!2sCondom%C3%ADnio%20Metropolitan%20Center%20-%20Av.%20Tancredo%20Neves%2C%20969%20-%20
-                            Caminho%20das%20%C3%81rvores%2C%20Salvador%20-%20BA%2C%2041820-021%2C%20Brasil!5e0!3m2!1s
-                            pt-BR!2sus!4v1752173061622!5m2!1spt-BR!2sus" width="600" height="450" style="border:0;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.762759692223!2d-38.457413!3d-12.979438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b0ff331e23f%3A0x6b8eeae0e8cce743!2sCondom%C3%ADnio%20Metropolitan%20Center%20-%20Av.%20Tancredo%20Neves%2C%20969%20-%20Caminho%20das%20%C3%81rvores%2C%20Salvador%20-%20BA%2C%2041820-021%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1752173061622!5m2!1spt-BR!2sus" 
+                    width="600" height="450" 
+                    style="border:0;" 
+                    title="Localização do consultório Sentydos" 
+                    sandbox="allow-scripts allow-same-origin allow-popups" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade" 
+                    allowfullscreen="">
                 </iframe>
             </section>  
 
             <section id="contacts">
                 <h2>Contato ☎️</h2>
                 <div class="whatsApp">
-                    <a href="https://wa.me/557188911911?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão" class="whatsApp-button" target="_blank" rel="noopener noreferrer">Fale comigo via WhatsApp!<p style="font-size:24px" class="fa">&#xf232;</p></a>
+                    <a href="https://wa.me/557188911911?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão" class="whatsApp-button" target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp">Fale comigo via WhatsApp!<p style="font-size:24px" class="fa">&#xf232;</p></a>
                 </div>
                 <div class="mail">
-                    <a href=" mailto: contato@sentydos.com.br" class="mail-button" rel="noopener noreferrer">Fale comigo via e-mail! 📧</a> 
+                    <a href="mailto:contato@sentydos.com.br" class="mail-button" rel="noopener noreferrer" aria-label="Contato via Email">
+                        <span class="mail-text">Fale comigo via e-mail!</span>
+                        <span class="mail-icon">📧</span>
+                    </a> 
                 </div>
                 <div class="instagram">
-                    <a href="https://www.instagram.com/valmirofilhopsicologo/" class="insta-button" target="_blank" rel="noopener noreferrer">Fale comigo via Instagram!<i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/valmirofilhopsicologo/" class="insta-button" target="_blank" rel="noopener noreferrer" aria-label="Contato via Instagram">Fale comigo via Instagram!<i class="bi bi-instagram"></i></a>
                 </div>
                 <div class="telefone">
                     <p>Via Telefone: 📞71 3019-8666</p>
@@ -132,11 +283,47 @@
             </div>  
         </div>
 
-    <footer class="navegadores">
-        <p>© SENTYDOS 2017-2025 | Desenvolvido por <a href="https://github.com/crsandrade" target="_blank" rel="author">Rafael de Andrade</a></p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-container">
+                    <img src="public/assets/images/fav.png" alt="Logo Sentydos" class="footer-logo-img">
+                    <h3>SENTYDOS</h3>
+                </div>
+                <p>A sua mente no melhor estado</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p><i class="fa">&#xf095;</i> (71) 3019-8666</p>
+                <p><i class="fa">&#xf232;</i> (71) 8891-1911</p>
+                <p><i class="fa">&#xf0e0;</i> contato@sentydos.com.br</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links</h4>
+                <p><a href="security-policy.html" rel="noopener">Política de Segurança</a></p>
+                <p><a href="privacy-policy.html" rel="noopener">Política de Privacidade</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><span class="copyright-logo">© <img src="public/assets/images/fav.png" alt="Logo Sentydos" class="footer-copyright-img"><span>SENTYDOS</span> 2017-2025</span><span class="separator">|</span><span>Desenvolvido por <a href="https://github.com/crsandrade" target="_blank" rel="noopener noreferrer" aria-label="Perfil do desenvolvedor no GitHub">Rafael de Andrade</a></span></p>
+        </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <a href="#" class="back-to-top" aria-label="Voltar ao topo" rel="nofollow"><i class="fa">&#xf077;</i></a>
+    <script src="src/scripts/script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./config/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado com sucesso:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Falha ao registrar Service Worker:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>

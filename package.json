@@ -1,0 +1,42 @@
+{
+  "name": "sentydos-website",
+  "version": "1.0.0",
+  "description": "Website do Consultório de Psicologia Sentydos - A sua mente no melhor estado",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/",
+    "build": "echo 'Build process - minify CSS and JS files'",
+    "test": "echo 'No tests specified'",
+    "lint:css": "npx stylelint 'src/styles/**/*.css'",
+    "lint:js": "npx eslint 'src/scripts/**/*.js'",
+    "format": "npx prettier --write ."
+  },
+  "keywords": [
+    "psicologia",
+    "psicoterapia",
+    "saude-mental",
+    "consultorio",
+    "website",
+    "pwa"
+  ],
+  "author": "Rafael de Andrade",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crsandrade/sentydos-website"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

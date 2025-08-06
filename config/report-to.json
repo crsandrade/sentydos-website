@@ -1,0 +1,8 @@
+{
+  "group": "default",
+  "max_age": 10886400,
+  "endpoints": [
+    { "url": "https://www.sentydos.com.br/csp-report.php" }
+  ],
+  "include_subdomains": true
+}
